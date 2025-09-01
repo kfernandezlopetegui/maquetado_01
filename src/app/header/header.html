@@ -1,0 +1,41 @@
+<header class="main-header">
+  <div class="header-container">
+    <!-- Logo/Brand -->
+    <div class="brand">
+      <h1 class="brand-title">Mi App</h1>
+      <span class="brand-subtitle">Maquetado Angular</span>
+    </div>
+
+    <!-- Navegación principal -->
+    <nav class="main-nav">
+      <a routerLink="/bienvenida" 
+         routerLinkActive="nav-active" 
+         class="nav-link">
+        <i class="fas fa-home"></i>
+        Bienvenida
+      </a>
+      
+      <a routerLink="/login" 
+         routerLinkActive="nav-active" 
+         class="nav-link">
+        <i class="fas fa-sign-in-alt"></i>
+        Login
+      </a>
+      
+      <a routerLink="/sobre-mi" 
+         routerLinkActive="nav-active" 
+         class="nav-link">
+        <i class="fas fa-user"></i>
+        Sobre mí
+      </a>
+    </nav>
+
+    <!-- Botón destacado (opcional) -->
+    <div class="header-actions">
+      <button routerLink="/registro" class="btn-register">
+        <i class="fas fa-user-plus"></i>
+        Registro
+      </button>
+    </div>
+  </div>
+</header>

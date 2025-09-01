@@ -1,0 +1,196 @@
+/* header/header.component.css */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+.main-header {
+  background: #FFFFFF;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+}
+
+/* Brand/Logo */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.brand-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(135deg, #FF4B2B, #FF416C);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #FF4B2B; /* Fallback para navegadores que no soporten background-clip */
+}
+
+.brand-subtitle {
+  font-size: 11px;
+  font-weight: 400;
+  color: #666;
+  margin-top: -2px;
+  letter-spacing: 0.5px;
+}
+
+/* Navegación principal */
+.main-nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #FF4B2B;
+  background-color: #fff1f0;
+}
+
+.nav-link i {
+  font-size: 16px;
+  width: 16px;
+  text-align: center;
+}
+
+/* Estado activo */
+.nav-link.nav-active {
+  color: #FF4B2B;
+  background-color: #fff1f0;
+}
+
+.nav-link.nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: #FF4B2B;
+  border-radius: 50%;
+}
+
+/* Botones de acción */
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-register {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #FF4B2B, #FF416C);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-register:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(255, 75, 43, 0.3);
+}
+
+.btn-register:active {
+  transform: translateY(0);
+}
+
+.btn-register i {
+  font-size: 14px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .header-container {
+    padding: 0 15px;
+    min-height: 60px;
+  }
+
+  .brand-title {
+    font-size: 20px;
+  }
+
+  .brand-subtitle {
+    font-size: 10px;
+  }
+
+  .main-nav {
+    gap: 15px;
+  }
+
+  .nav-link {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .nav-link span {
+    display: none; /* Ocultar texto en móvil, solo íconos */
+  }
+
+  .btn-register {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-container {
+    flex-wrap: wrap;
+    min-height: auto;
+    padding: 10px 15px;
+  }
+
+  .brand {
+    order: 1;
+    flex: 1;
+  }
+
+  .header-actions {
+    order: 2;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #f0f0f0;
+  }
+}

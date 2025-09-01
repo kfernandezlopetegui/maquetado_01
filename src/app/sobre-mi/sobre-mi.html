@@ -1,0 +1,184 @@
+<!-- sobre-mi/sobre-mi.component.html -->
+<div class="about-container">
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="profile-section">
+        <div class="profile-image">
+          <img [src]="personalInfo.avatar" [alt]="personalInfo.name" />
+          <div class="image-overlay">
+            <i class="fas fa-camera"></i>
+          </div>
+        </div>
+        <div class="profile-info">
+          <h1 class="profile-name">{{ personalInfo.name }}</h1>
+          <p class="profile-role">{{ personalInfo.role }}</p>
+          <div class="profile-location">
+            <i class="fas fa-map-marker-alt"></i>
+            {{ personalInfo.location }}
+          </div>
+        </div>
+      </div>
+      
+      <div class="intro-section">
+        <h2>¡Hola! 👋</h2>
+        <p class="intro-text">{{ personalInfo.description }}</p>
+        
+        <!-- Social Links -->
+        <div class="social-links">
+          @for (social of socialLinks; track social.name) {
+            <a [href]="social.url" 
+               target="_blank" 
+               class="social-link"
+               [title]="social.name">
+              <i [class]="social.icon"></i>
+            </a>
+          }
+        </div>
+        
+        <!-- CTA Buttons -->
+        <div class="hero-actions">
+          <button (click)="openLink('mailto:' + personalInfo.email)" class="btn-primary">
+            <i class="fas fa-envelope"></i>
+            Contáctame
+          </button>
+          <button routerLink="/bienvenida" class="btn-secondary">
+            <i class="fas fa-home"></i>
+            Ir al Inicio
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section">
+    <div class="section-container">
+      <h2 class="section-title">Mis Habilidades</h2>
+      <div class="skills-grid">
+        @for (skill of skills; track skill.name) {
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i [class]="skill.icon"></i>
+            </div>
+            <h3 class="skill-name">{{ skill.name }}</h3>
+            <div class="skill-progress">
+              <div class="progress-bar" [style.width.%]="skill.level">
+                <span class="progress-text">{{ skill.level }}%</span>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="experience-section">
+    <div class="section-container">
+      <h2 class="section-title">Mi Experiencia</h2>
+      <div class="timeline">
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Estudiante de Desarrollo Web</h3>
+              <span class="timeline-date">2024 - Presente</span>
+            </div>
+            <p>Aprendiendo desarrollo frontend con Angular, TypeScript y CSS moderno. Enfocado en crear interfaces de usuario elegantes y responsivas.</p>
+            <div class="timeline-tags">
+              <span class="tag">Angular</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">CSS3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Proyecto Personal - Mi App</h3>
+              <span class="timeline-date">2024</span>
+            </div>
+            <p>Desarrollo de una aplicación web completa con sistema de login, registro y navegación. Implementando diseño responsive y animaciones modernas.</p>
+            <div class="timeline-tags">
+              <span class="tag">Maquetado</span>
+              <span class="tag">UX/UI</span>
+              <span class="tag">Router</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Comenzando en el Desarrollo</h3>
+              <span class="timeline-date">2023</span>
+            </div>
+            <p>Primeros pasos en programación web. Aprendiendo HTML, CSS y JavaScript. Descubriendo la pasión por crear interfaces atractivas.</p>
+            <div class="timeline-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="section-container">
+      <h2 class="section-title">¿Hablamos?</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Conectemos</h3>
+          <p>Si tienes alguna pregunta, sugerencia o simplemente quieres charlar sobre desarrollo, ¡no dudes en contactarme!</p>
+          
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p>{{ personalInfo.email }}</p>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Ubicación</h4>
+                <p>{{ personalInfo.location }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-actions">
+          <div class="action-card" (click)="openLink('mailto:' + personalInfo.email)">
+            <i class="fas fa-paper-plane"></i>
+            <h4>Enviar Email</h4>
+            <p>Escríbeme directamente</p>
+          </div>
+          
+          <div class="action-card" routerLink="/login">
+            <i class="fas fa-sign-in-alt"></i>
+            <h4>Probar la App</h4>
+            <p>Explora el login</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

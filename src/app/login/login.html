@@ -1,0 +1,36 @@
+<!-- login/login.component.html -->
+<div class="container">
+  <!-- Solo el formulario de Login DERECHA -->
+  <div class="form-container form-container-right">
+    <form>
+      <h1>Iniciar Sesión</h1>
+      <div class="social-container">
+        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <span>o usa tu cuenta</span>
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Contraseña" />
+      <a href="#" (click)="onForgotPassword()">¿Olvidaste tu contraseña?</a>
+      <button type="button" (click)="onLogin()">Iniciar Sesión</button>
+      
+      <!-- Enlaces de navegación con routerLink -->
+      <div class="navigation-links">
+        <p>¿No tienes cuenta? 
+          <a routerLink="/registro" class="register-link">Regístrate aquí</a>
+        </p>
+        <a routerLink="/sobre-mi" class="about-link">Sobre mí</a>
+      </div>
+    </form>
+  </div>
+
+  <!-- Panel decorativo lateral IZQUIERDO para login -->
+  <div class="side-panel side-panel-left">
+    <div class="side-content">
+      <h1>¡Hola, Amigo!</h1>
+      <p>¿Nuevo por aquí? Crea tu cuenta y comienza tu viaje con nosotros</p>
+      <button class="ghost" routerLink="/registro">Registrarse</button>
+    </div>
+  </div>
+</div>

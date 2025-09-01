@@ -1,0 +1,36 @@
+<!-- registro/registro.component.html -->
+<div class="container">
+  <!-- Solo el formulario de Registro IZQUIERDA -->
+  <div class="form-container form-container-left">
+    <form>
+      <h1>Crear Cuenta</h1>
+      <div class="social-container">
+        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <span>o usa tu email para registrarte</span>
+      <input type="text" placeholder="Nombre" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Contraseña" />
+      <button type="button" (click)="onRegister()">Registrarse</button>
+      
+      <!-- Enlaces de navegación con routerLink -->
+      <div class="navigation-links">
+        <p>¿Ya tienes cuenta? 
+          <a routerLink="/login" class="login-link">Inicia sesión aquí</a>
+        </p>
+        <a routerLink="/sobre-mi" class="about-link">Sobre mí</a>
+      </div>
+    </form>
+  </div>
+
+  <!-- Panel decorativo lateral DERECHO para registro -->
+  <div class="side-panel side-panel-right">
+    <div class="side-content">
+      <h1>¡Bienvenido de vuelta!</h1>
+      <p>¿Ya tienes cuenta? Inicia sesión para conectarte con nosotros</p>
+      <button class="ghost" routerLink="/login">Iniciar Sesión</button>
+    </div>
+  </div>
+</div>

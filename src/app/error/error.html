@@ -1,0 +1,68 @@
+<!-- error/error.component.html -->
+<div class="error-container">
+  <div class="error-content">
+    <!-- Número 404 grande y animado -->
+    <div class="error-number">
+      <span class="four">4</span>
+      <span class="zero">0</span>
+      <span class="four">4</span>
+    </div>
+
+    <!-- Mensaje principal -->
+    <h1 class="error-title">¡Oops! Página no encontrada</h1>
+    
+    <p class="error-message">
+      La página que buscas no existe o ha sido movida. 
+      Pero no te preocupes, podemos ayudarte a encontrar lo que necesitas.
+    </p>
+
+    <!-- Sugerencias visuales -->
+    <div class="error-suggestions">
+      <div class="suggestion-item">
+        <i class="fas fa-home"></i>
+        <span>Ir al inicio</span>
+      </div>
+      <div class="suggestion-item">
+        <i class="fas fa-search"></i>
+        <span>Buscar contenido</span>
+      </div>
+      <div class="suggestion-item">
+        <i class="fas fa-envelope"></i>
+        <span>Contactar soporte</span>
+      </div>
+    </div>
+
+    <!-- Botones de acción -->
+    <div class="error-actions">
+      <button routerLink="/bienvenida" class="btn-primary">
+        <i class="fas fa-home"></i>
+        Ir al Inicio
+      </button>
+      
+      <button (click)="goBack()" class="btn-secondary">
+        <i class="fas fa-arrow-left"></i>
+        Volver Atrás
+      </button>
+    </div>
+
+    <!-- Enlaces adicionales -->
+    <div class="error-links">
+      <a routerLink="/login" class="error-link">
+        <i class="fas fa-sign-in-alt"></i>
+        Iniciar Sesión
+      </a>
+      <a routerLink="/sobre-mi" class="error-link">
+        <i class="fas fa-user"></i>
+        Sobre Mí
+      </a>
+    </div>
+  </div>
+
+  <!-- Decoración de fondo -->
+  <div class="error-decoration">
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+    <div class="floating-shape shape-4"></div>
+  </div>
+</div>

@@ -1,0 +1,170 @@
+<!-- bienvenida/bienvenida.component.html -->
+<div class="welcome-container">
+  
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          ¡Bienvenido a
+          <span class="gradient-text">Mi Aplicación</span>!
+        </h1>
+        <p class="hero-subtitle">
+          Descubre una experiencia única con nuestro maquetado moderno en Angular
+        </p>
+        <div class="hero-actions">
+          <button routerLink="/login" class="btn-primary">
+            <i class="fas fa-rocket"></i>
+            Comenzar Ahora
+          </button>
+          <button (click)="scrollToSection('features')" class="btn-secondary">
+            <i class="fas fa-arrow-down"></i>
+            Explorar Más
+          </button>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="card-header">
+            <div class="card-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="code-line">
+              <span class="code-tag">&lt;app-welcome</span>
+              <span class="code-attr">modern</span>
+              <span class="code-value">="true"</span>
+              <span class="code-tag">/&gt;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Decoración flotante -->
+    <div class="floating-elements">
+      <div class="float-item item-1">
+        <i class="fab fa-angular"></i>
+      </div>
+      <div class="float-item item-2">
+        <i class="fas fa-palette"></i>
+      </div>
+      <div class="float-item item-3">
+        <i class="fas fa-code"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features-section">
+    <div class="section-container">
+      <h2 class="section-title">Características Destacadas</h2>
+      <div class="features-grid">
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3>Diseño Responsive</h3>
+          <p>Adaptado perfectamente a todos los dispositivos y tamaños de pantalla</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h3>Estilo Moderno</h3>
+          <p>Gradientes, sombras y animaciones que crean una experiencia visual impactante</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-route"></i>
+          </div>
+          <h3>Navegación Fluida</h3>
+          <p>Router de Angular con transiciones suaves entre componentes</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Experiencia de Usuario</h3>
+          <p>Interfaz intuitiva y accesible para todos los usuarios</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Actions Section -->
+  <section class="actions-section">
+    <div class="section-container">
+      <h2 class="section-title">¿Qué quieres hacer?</h2>
+      <div class="actions-grid">
+        
+        <div class="action-card" routerLink="/login">
+          <div class="action-icon">
+            <i class="fas fa-sign-in-alt"></i>
+          </div>
+          <h3>Iniciar Sesión</h3>
+          <p>Accede a tu cuenta con nuestro elegante formulario de login</p>
+          <div class="action-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <div class="action-card" routerLink="/registro">
+          <div class="action-icon">
+            <i class="fas fa-user-plus"></i>
+          </div>
+          <h3>Crear Cuenta</h3>
+          <p>Únete a nosotros con un registro rápido y sencillo</p>
+          <div class="action-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <div class="action-card" routerLink="/sobre-mi">
+          <div class="action-icon">
+            <i class="fas fa-user"></i>
+          </div>
+          <h3>Conocer Más</h3>
+          <p>Descubre más información sobre el desarrollador y el proyecto</p>
+          <div class="action-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="section-container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Responsive</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">5</div>
+          <div class="stat-label">Componentes</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">CSS3</div>
+          <div class="stat-label">Animaciones</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">Angular</div>
+          <div class="stat-label">Framework</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
